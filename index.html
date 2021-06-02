@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+
+            <div class="logo_icon">
+                <i class="fas fa-sun fa-3x"></i>
+            </div>
+
+            <div class="logo_text">
+                <h2>Current</h2>
+                <span>Weather</span>
+            </div>
+
+        </div>
+
+        <div class="search">
+          
+                <input id="search-box" type="search" placeholder="Search city" maxlength="20">
+                <button type="submit" class="Desktop_search_btn" id="search_btn">Search</button>
+                <button type="submit"  class="small_btn" id="go_btn">GO</button>
+       
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="upper">
+                
+                <div class="name_info">
+                    <h1 class="city">--------</h1>
+                    <span class="country">----</span>
+                    <span class="data">-----</span>
+                </div>
+                   
+                <div class="icon">
+                    <img id="icon-image" src="#" >
+         
+                </div>
+            </div>
+
+            <div class="middle">
+                <div class="temp_section">
+                    <h1 class="temp">---</h1>
+                    <span class="degree">°C</span>
+                </div>
+               <br>
+                <span class="stats">----</span><br>
+                <span class="des">------</span>
+            </div>
+                
+            <div class="lower">
+                <div class="text">
+                    <p class="p">Pressure:</p>
+                    <p class="h">Humidity:</p>
+                    <p class="s">Wind Speed:</p>
+                </div>
+
+                <div class="text_value">
+                    <p class="pa">--- hPa</p>
+                    <p class="hu">--%</p>
+                    <p class="sp">--m/s</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>&copy; Copyright 2021 Ankit Shrestha</footer>
+    <script src="java.js"></script>
+
+</body>
+
+</html>
