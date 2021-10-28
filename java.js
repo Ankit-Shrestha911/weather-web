@@ -121,9 +121,12 @@ async function WeatherSearching() {
     const api_Url1 = `https://api.openweathermap.org/data/2.5/weather?q=${search.value.trim()}&appid=${api_id}&units=metric`;
     const response = await fetch(api_Url1);
     const data = await response.json();
-    showData(data);
-    showImage(data);
-    search.value = "";
+    if(data)
+    {
+      showData(data);
+      showImage(data);
+      search.value = "";
+    }
   } catch {
     alert("Enter the city name correctly....");
   }
