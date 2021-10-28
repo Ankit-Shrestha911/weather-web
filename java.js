@@ -129,6 +129,7 @@ async function WeatherSearching() {
     }
   } catch {
     alert("Enter the city name correctly....");
+    console.log('alert');
   }
 }
 
