@@ -128,7 +128,6 @@ async function WeatherSearching() {
     }
   } catch {
     alert("Enter the city name correctly....");
-    console.log("alert");
   }
 }
 
@@ -152,7 +151,8 @@ smallSearch.addEventListener("click", () => {
           // WeatherSearching()
         }
         if (result.state == "denied") WeatherSearching();
-        else WeatherSearching();
+        if(result.state == 'granted') WeatherSearching();
+        
       });
   }
 
@@ -178,8 +178,7 @@ desktopSearch.addEventListener("click", () => {
           getLocation();
         }
         if (result.state == "denied") WeatherSearching();
-        else
-          WeatherSearching();
+        if(result.state == 'granted') WeatherSearching();
       });
   } else WeatherSearching();
 
