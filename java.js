@@ -121,15 +121,14 @@ async function WeatherSearching() {
     const api_Url1 = `https://api.openweathermap.org/data/2.5/weather?q=${search.value.trim()}&appid=${api_id}&units=metric`;
     const response = await fetch(api_Url1);
     const data = await response.json();
-    if(data)
-    {
+    if (data) {
       showData(data);
       showImage(data);
       search.value = "";
     }
   } catch {
     alert("Enter the city name correctly....");
-    console.log('alert');
+    console.log("alert");
   }
 }
 
@@ -153,7 +152,7 @@ smallSearch.addEventListener("click", () => {
           // WeatherSearching()
         }
         if (result.state == "denied") WeatherSearching();
-        // else WeatherSearching();
+        else WeatherSearching();
       });
   }
 
@@ -179,6 +178,8 @@ desktopSearch.addEventListener("click", () => {
           getLocation();
         }
         if (result.state == "denied") WeatherSearching();
+        else
+          WeatherSearching();
       });
   } else WeatherSearching();
 
