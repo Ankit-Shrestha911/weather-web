@@ -149,7 +149,7 @@ smallSearch.addEventListener("click", () => {
           getLocation();
           // WeatherSearching()
         }
-        if (result.state == "denied") WeatherSearching();
+//         if (result.state == "denied") WeatherSearching();
         if(result.state == 'granted') WeatherSearching();
         
       });
@@ -176,7 +176,7 @@ desktopSearch.addEventListener("click", () => {
         if (result.state != "granted") {
           getLocation();
         }
-        if (result.state == "denied") WeatherSearching();
+//         if (result.state == "denied") WeatherSearching();
         if(result.state == 'granted') WeatherSearching();
       });
   } else WeatherSearching();
@@ -201,6 +201,7 @@ window.addEventListener("load", () => {
       .then(function (result) {
         if (result.state != "granted") {
           alert("Press the Go / Search button to fetch your location");
+          getLocation();
         }
       });
   }
