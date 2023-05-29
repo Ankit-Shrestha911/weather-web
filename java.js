@@ -49,13 +49,12 @@ function showImage(data) {
 
   if (icon.includes("n") && description === "clear sky") {
     iconImg.src = "./icons/color-moon.png";
-    console.log("night");
   } else if (icon.includes("n") && description === "few clouds") {
     iconImg.src = "./icons/moon-cloud.png";
-    console.log("night");
+   
   } else if (icon.includes("n") && description === "thunderstorm") {
     iconImg.src = "./icons/night-thunderstorm.png";
-    console.log("night");
+   
   } else {
     if (id < 250) {
       iconImg.src = "   icons/storm.svg";
@@ -78,7 +77,7 @@ function showImage(data) {
     }
   }
 }
-// Pop-up location prompt  and fetch the data from api and show info //
+// Pop-up location prompt and fetch the data from api and show info //
 
 function getLocation() {
   let lat; // latitude
