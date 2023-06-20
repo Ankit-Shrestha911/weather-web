@@ -200,7 +200,7 @@ window.addEventListener("load", () => {
       .query({ name: "geolocation" })
       .then(function (result) {
         if (result.state != "granted") {
-//           alert("Press the Go / Search button to fetch your location");
+         alert("Press the Go / Search button to fetch your location");
           getLocation();
         }
       });
