@@ -1,13 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;    
+    box-sizing: border-box;
     letter-spacing: 2px;
+
 }
 
 
 
-body{
+body {
     width: 100vw;
     min-height: 100vh;
     background: #1B1464;
@@ -15,35 +16,37 @@ body{
     color: white;
     text-shadow: 1px 1px 1px black;
     user-select: none;
+
 }
 
-nav{
+nav {
     width: 100%;
     height: 100px;
     display: flex;
     justify-content: space-between;
-    align-items: center ;
+    align-items: center;
     position: fixed;
-    background: #1B1464;
+   
+
 }
 
-nav .logo{
+nav .logo {
     display: flex;
     align-items: center;
     margin-left: 20px;
 }
 
-nav .logo .logo_icon{
+nav .logo .logo_icon {
     color: orange;
     font-size: 15px;
 }
 
-nav .logo .logo_text{
+nav .logo .logo_text {
     margin: 10px;
     font-size: 20px;
 }
 
-nav .search{
+nav .search {
     display: flex;
     align-items: center;
     height: 50px;
@@ -51,7 +54,7 @@ nav .search{
 
 }
 
-nav .search input{
+nav .search input {
     width: 500px;
     height: 50px;
     padding: 0px 30px 0px 40px;
@@ -63,11 +66,11 @@ nav .search input{
     font-weight: bold;
 }
 
-nav .search button{
+nav .search button {
     padding: 15px 30px;
     font-size: 20px;
     font-weight: 600;
-    border-radius: 40px;    
+    border-radius: 40px;
     outline: none;
     background: transparent;
     margin-right: 20px;
@@ -77,60 +80,65 @@ nav .search button{
     border: 1px solid orange;
 }
 
-nav .search #go_btn{
+nav .search #go_btn {
     display: none;
 }
 
-nav .search button:hover{
-   background-color: orange;
-   color: black;
-   outline: none;
-   
+nav .search button:hover {
+    background-color: orange;
+    color: black;
+    outline: none;
+    transition: 400ms;
+
 }
 
-nav .search button:active{
+nav .search button:active {
     box-shadow: inset 0px 0px 3px black;
     outline: none;
 
 }
 
-section{
+section {
     width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
 
+
 }
 
-section .container{
-        width: 900px;
-        height: 600px;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        z-index: -1;
+section .container {
+    width: 900px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: -1;
+
 }
 
-section .container .upper{
+section .container .upper {
     position: absolute;
     display: flex;
     width: 800px;
     height: 200px;
     justify-content: space-between;
     top: 26%;
+
 }
 
-section .container .upper .name_info{
+section .container .upper .name_info {
     display: flex;
     flex-direction: column;
 }
 
-section .container .upper .name_info .city{
+section .container .upper .name_info .city {
     font-size: 60px;
     font-weight: 800;
-  
+
 }
 
-section .container .upper .icon img{
+section .container .upper .icon img {
     width: 100%;
     max-width: 250px;
     height: auto;
@@ -142,37 +150,36 @@ section .container .upper .icon {
     position: absolute;
     right: 0;
     top: -50px;
+
 }
 
-section .middle{
+section .middle {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border: 1px solid red; */
     text-align: center;
     width: 300px;
     position: absolute;
     top: 50%;
+
 }
 
-section .middle .temp_section{
-    /* position: absolute; */
+section .middle .temp_section {
     display: flex;
-    /* border: 1px solid red; */
     justify-content: center;
 }
 
-section .middle .temp_section h1{
+section .middle .temp_section h1 {
     font-size: 50px;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
 }
 
-section .middle .temp_section .degree{
+section .middle .temp_section .degree {
     font-size: 40px;
 }
 
-section .lower{
+section .lower {
     display: flex;
     position: absolute;
     top: 85%;
@@ -181,11 +188,11 @@ section .lower{
     font-size: 20px;
 }
 
-section .lower p{
+section .lower p {
     margin-top: 15px;
 }
 
-footer{
+footer {
     font-size: .7rem;
     position: absolute;
     bottom: 0;
@@ -194,107 +201,65 @@ footer{
     text-align: center;
     padding: 20px 0px 5px 0px;
 }
-/* and (min-width:900px) */
-/* @media  only screen  and (max-width: 1200px) {
-    nav{
+
+@media only screen and (max-width: 900px) {
+    nav {
         position: fixed;
     }
 
-    body{
-        min-height: 100vh;
-    }
-    section .container .upper .name_info .city{
-        font-size: 100px;
-    }
-
-    section .container .upper{
-        top: 20%;
-    }
-
-    section  .container .middle{
-        top: 45%;
-    }
-
-    section .container .upper .name_info .country,
-    section .container .upper .name_info .data{
-        font-size: 30px;
-    }
-
-    section .middle .temp_section .temp{
-        font-size: 120px;
-        cursor: pointer;
-    }
-
-    section .middle .stats,
-    section .middle .des{
-        font-size: 30px;
-    }
-
-    section .lower{
-        width: 700px;
-        top: 70%;
-        font-size: 40px;
-    }
-
-} */
-/* and (min-width:401px)  */
-
-@media  only screen and (max-width: 900px) {
-    nav{
-        position: fixed;
-    }
-    body{
+    body {
         margin: 0px auto;
 
     }
-    section .container .upper .name_info .city{
+
+    section .container .upper .name_info .city {
         font-size: 3.1rem;
 
-        
+
 
     }
 
     section .container .upper .name_info .country,
-    section .container .upper .name_info .data{
+    section .container .upper .name_info .data {
         margin-top: 5px;
-        font-size: .9rem    ;
+        font-size: .9rem;
     }
 
 
-   
 
-    
-   section .container .upper  .icon img{
-    width: 100%;
-    max-width: 170px;
-    height: auto;
 
-}
 
-    section .container .upper{
+    section .container .upper .icon img {
+        width: 100%;
+        max-width: 170px;
+        height: auto;
+
+    }
+
+    section .container .upper {
         padding: 0px 20px;
         width: 100%;
         max-width: 700px;
         height: auto;
     }
 
-    nav .search input{
+    nav .search input {
         width: 100%;
-         max-width: 350px;
+        max-width: 350px;
         margin-right: -10px;
         font-size: 20px;
     }
 
-    nav .search #search_btn{
+    nav .search #search_btn {
         padding: 13px 15px;
         margin-left: 20px;
     }
 
-    section .container .middle .temp_section{
+    section .container .middle .temp_section {
         margin-left: 30px;
     }
 
-    section .lower{
+    section .lower {
         width: 100%;
         max-width: 500px;
         top: 87%;
@@ -302,8 +267,8 @@ footer{
     }
 }
 
-@media only screen and (min-width: 423px) and (max-width: 700px){
-    nav{
+@media only screen and (min-width: 423px) and (max-width: 700px) {
+    nav {
         margin-top: -20px;
         display: flex;
         flex-direction: column;
@@ -312,61 +277,66 @@ footer{
         height: 150px;
     }
 
-    nav .logo .logo_text{
+    nav .logo .logo_text {
         font-size: .8rem;
     }
-    section .container .upper .name_info .city{
+
+    section .container .upper .name_info .city {
         width: 100%;
         max-width: 300px;
     }
-    nav .logo .logo_icon{
+
+    nav .logo .logo_icon {
         font-size: 9px;
     }
 
-    nav .search input{
+    nav .search input {
         width: 100%;
-         max-width: 500px;
-        /* margin-left:  30px; */
+        max-width: 500px;
+
         font-size: 17px;
     }
 
-    nav .search{
-        /* border:  1px solid red; */
+    nav .search {
+
         width: 100%;
         max-width: 500px;
         display: flex;
         justify-content: space-around;
         padding: 0px 20px;
     }
-    nav .search .Desktop_search_btn{
+
+    nav .search .Desktop_search_btn {
         width: 100%;
         font-size: 18px;
         max-width: 100px;
-        /* margin-right: -90px; */
+
 
     }
-    section .container .upper  .icon img{
+
+    section .container .upper .icon img {
         width: 100%;
         max-width: 110px;
         height: auto;
         margin-top: 35px;
-    
+
     }
 
-    section .lower{
-       
+    section .lower {
+
         top: 80%;
     }
- 
-    section .lower p{
+
+    section .lower p {
         font-size: 1.1rem;
     }
-    
+
 
 }
+
 @media only screen and (max-width: 423px) {
 
-    nav{
+    nav {
         position: fixed;
         display: flex;
         flex-direction: column;
@@ -374,110 +344,112 @@ footer{
         align-items: center;
     }
 
-    body{
+    body {
         width: 100vw;
         min-height: 90vh;
 
     }
-    nav .logo .logo_text{
+
+    nav .logo .logo_text {
         font-size: 10px;
     }
-   nav .search{
-       width: 100%;
-   }
+
+    nav .search {
+        width: 100%;
+    }
 
 
 
-   nav .search input{
-       width: 100%;
-       max-width: 250px;
-       font-size: 15px;
-        padding: 0px 10px 0px 20px; 
+    nav .search input {
+        width: 100%;
+        max-width: 250px;
+        font-size: 15px;
+        padding: 0px 10px 0px 20px;
         margin: 10px 0px 0px 25px;
-   }
+    }
 
-   nav  .logo .logo_icon{
-       font-size: 9px;
-   }
+    nav .logo .logo_icon {
+        font-size: 9px;
+    }
 
-   section .container{
-       width: 100%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-   }
+    section .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-   section .container .upper .name_info .country,
-   section .container .upper .name_info .data{
-       font-size: 0.8rem;
-       margin-top: 10px;
-   }
+    section .container .upper .name_info .country,
+    section .container .upper .name_info .data {
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
 
-   section .container .upper{
-        width: 100%;   
+    section .container .upper {
+        width: 100%;
         max-width: 350px;
         display: flex;
         justify-content: space-between;
-   }
+    }
 
-   section .container .upper .name_info .city{
-       font-size: 2.1rem;
-       width: 200px;
-       /* border: 1px solid red; */
-   }
+    section .container .upper .name_info .city {
+        font-size: 2.1rem;
+        width: 200px;
+        /* border: 1px solid red; */
+    }
 
-   section .container .upper  .icon img{
-       margin-top: 30px;
-       width: 100%;
-       max-width: 80px;
-       height: 80px;
+    section .container .upper .icon img {
+        margin-top: 30px;
+        width: 100%;
+        max-width: 80px;
+        height: 80px;
 
-   }
+    }
 
-   section .container .middle .temp_section{
-      margin-left: 20px;
-      text-align: center;
-      width: 100%;
-   }
+    section .container .middle .temp_section {
+        margin-left: 20px;
+        text-align: center;
+        width: 100%;
+    }
 
-   section .lower{
-       width: 300px;
-       top: 80%;
-   }
+    section .lower {
+        width: 300px;
+        top: 80%;
+    }
 
-   section .lower p{
-       font-size: 1rem;
-   }
-   nav .search #search_btn{
-       display: none;
-   }
+    section .lower p {
+        font-size: 1rem;
+    }
 
-   nav .search #go_btn{
-       display: flex;
-       padding: 13px 10px;
-       margin-left: 20px;
-       margin-top: 10px;
-       border-radius: 20px;
-   }
+    nav .search #search_btn {
+        display: none;
+    }
 
-   footer{
-       font-size: .5rem;
-   }
-    
+    nav .search #go_btn {
+        display: flex;
+        padding: 13px 10px;
+        margin-left: 20px;
+        margin-top: 10px;
+        border-radius: 20px;
+    }
+
+    footer {
+        font-size: .5rem;
+    }
+
 }
 
 
 @media only screen and (max-width: 350px) {
-    
-   
-    body{
+
+
+    body {
         display: flex;
         justify-content: center;
         padding: 0px 20px 0px 10px;
     }
 
-    footer{
+    footer {
         font-size: .5rem;
     }
 }
-
