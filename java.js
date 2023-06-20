@@ -51,10 +51,10 @@ function showImage(data) {
     iconImg.src = "./icons/color-moon.png";
   } else if (icon.includes("n") && description === "few clouds") {
     iconImg.src = "./icons/moon-cloud.png";
-   
+
   } else if (icon.includes("n") && description === "thunderstorm") {
     iconImg.src = "./icons/night-thunderstorm.png";
-   
+
   } else {
     if (id < 250) {
       iconImg.src = "   icons/storm.svg";
@@ -79,6 +79,8 @@ function showImage(data) {
 }
 // Pop-up location prompt and fetch the data from api and show info //
 
+
+
 function getLocation() {
   let lat; // latitude
   let long; // longitude
@@ -87,6 +89,7 @@ function getLocation() {
     navigator.geolocation.getCurrentPosition((poistion) => {
       lat = poistion.coords.latitude;
       long = poistion.coords.longitude;
+
       const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${api_id}&units=metric`;
       fetch(apiUrl)
         .then((res) => res.json())
@@ -134,76 +137,52 @@ async function WeatherSearching() {
 search.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     WeatherSearching();
-    // search.value = "";
   }
 });
 
 // This function only for phone and tablet //
 
 smallSearch.addEventListener("click", () => {
-  if (Location_Target.matches) {
-    navigator.permissions
-      .query({ name: "geolocation" })
-      .then(function (result) {
-        if (result.state != "granted") {
-          getLocation();
-          // WeatherSearching()
-        }
-//         if (result.state == "denied") WeatherSearching();
-        if(result.state == 'granted') WeatherSearching();
-        
-      });
-  }
+  navigator.permissions
+    .query({ name: "geolocation" })
+    .then(function (result) {
+      if (result.state != "granted") {
+        getLocation();
+      }
+      else {
+        WeatherSearching();
+      }
 
-  // else {
-  //   navigator.permissions
-  //     .query({ name: "geolocation" })
-  //     .then(function (result) {
-  //       if (result.state === "granted" || result.state === "denied") {
-  //         alert("Please enter a city name ");
-  //       }
-  //     });
-  // }
+
+    });
+
 });
 
 // For desktop search //
 
 desktopSearch.addEventListener("click", () => {
-  if (Location_Target.matches) {
-    navigator.permissions
-      .query({ name: "geolocation" })
-      .then(function (result) {
-        if (result.state != "granted") {
-          getLocation();
-        }
-//         if (result.state == "denied") WeatherSearching();
-        if(result.state == 'granted') WeatherSearching();
-      });
-  } else WeatherSearching();
+  navigator.permissions
+    .query({ name: "geolocation" })
+    .then(function (result) {
+      if (result.state != "granted") {
+        getLocation();
+      }
+      else {
+        WeatherSearching();
+      }
+    });
 
-  //   else {
-  //     navigator.permissions
-  //       .query({ name: "geolocation" })
-  //       .then(function (result) {
-  //         if (result.state === "granted" || result.state === "denied") {
-  //           alert("Please enter a city name ");
-  //         }
-  //       });
-  //   }
 });
+
+
 
 // Function is execute when the window is loading //
 
 window.addEventListener("load", () => {
+
   if (Location_Target.matches) {
-    navigator.permissions
-      .query({ name: "geolocation" })
-      .then(function (result) {
-        if (result.state != "granted") {
-         alert("Press the Go / Search button to fetch your location");
-          getLocation();
-        }
-      });
+    alert("Press the Go / Search button to fetch your location");
   }
   getLocation();
+
 });
